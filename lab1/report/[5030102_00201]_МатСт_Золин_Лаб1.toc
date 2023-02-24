@@ -1,0 +1,24 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Распределения}{4}{section.1}%
+\contentsline {section}{\numberline {2}Гистограмма}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Определение}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Графическое описание}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Использование}{4}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Вариационный ряд}{5}{section.3}%
+\contentsline {section}{\numberline {4}Выборочные числовые характеристики}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Характеристики положения}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Характеристики рассеяния}{5}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Боксплот Тьюки}{6}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Определение}{6}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Описание}{6}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Построение}{6}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Теоретическая вероятность выбросов}{6}{section.6}%
+\contentsline {section}{\numberline {7}Эмпирическая функция распределения}{6}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Статистический ряд}{6}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Определение}{7}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Описание}{7}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Оценки плотности вероятности}{7}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Определение}{7}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Ядерные оценки}{7}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Оценка качества ядерных приближений}{8}{subsection.8.3}%
+\contentsline {section}{Литература}{9}{figure.1}%
