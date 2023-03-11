@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.13)  25 FEB 2023 00:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.13)  10 MAR 2023 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -746,26 +746,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \tf@lot=\write6
 \openout6 = `[5030102_00201]_МатСт_Золин_Лаб1.lot'.
 
- [3] [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
-
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
+ [3] [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
 
@@ -774,53 +756,62 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.345 	
-       
-pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.345 	
-       ]
-Underfull \hbox (badness 10000) in paragraph at lines 362--363
+l.318 	\begin{equation}
+                       ]
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--367
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
 
  []
 
 [8
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
+ been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.392 	\newpage
-               ]
+l.391 	\end{equation}
+                     ]
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
+
+ []
+
+[9]
 LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
-397.
+441.
  (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-[9] (./[5030102_00201]_МатСт_Золин_Лаб1.aux)
+) [10] [11]
+(./[5030102_00201]_МатСт_Золин_Лаб1.aux)
 Package rerunfilecheck Info: File `[5030102_00201]_МатСт_Золин_Лаб
 1.out' has not changed.
-(rerunfilecheck)             Checksum: 1B676652F0A7A6C1B050A6B2DED2C41C;4494.
+(rerunfilecheck)             Checksum: EAACE61FD1547F41B13D147ABB045A34;7590.
  ) 
 Here is how much of TeX's memory you used:
- 13500 strings out of 476093
- 210626 string characters out of 5795583
+ 13534 strings out of 476093
+ 211253 string characters out of 5795583
  1866787 words of memory out of 5000000
- 33614 multiletter control sequences out of 15000+600000
+ 33625 multiletter control sequences out of 15000+600000
  523087 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,12n,77p,1297b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,12n,77p,1297b,520s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{c:/tex
 live/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-di
@@ -838,11 +829,11 @@ sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.p
 fb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/tex
 live/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb><c:/texlive/2022/
 texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on [5030102_00201]_МатСт_Золин_Лаб1.pdf (10 pages, 
-295329 bytes).
+Output written on [5030102_00201]_МатСт_Золин_Лаб1.pdf (12 pages, 
+303212 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
- 68 named destinations out of 1000 (max. 500000)
- 185 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 414 PDF objects out of 1000 (max. 8388607)
+ 361 compressed objects within 4 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 297 words of extra memory for PDF output out of 10000 (max. 10000000)
 
