@@ -1,5 +1,5 @@
 *.toc
-*.synctex
+*.synctex.gz
 *.out
 *.lot
 *.log
