@@ -4,7 +4,7 @@ from src.distribution import Distribution
 from prettytable import PrettyTable
 
 
-def calc_characteristics(dist_names, sizes, repeat_num, rounding):
+def calc_characteristics(dist_names, sizes, repeat_num):
     for dist_name in dist_names:
         for size in sizes:
             mean_list, median_list, z_r_list, z_q_list, z_tr_list, e_list, d_list = [], [], [], [], [], [], []
@@ -19,8 +19,8 @@ def calc_characteristics(dist_names, sizes, repeat_num, rounding):
                 z_q_list.append(z_q(arr, size))
                 z_tr_list.append(z_tr(arr, size))
             for elem in lists:
-                e_list.append(round(np.mean(elem), rounding))
-                d_list.append(round(np.std(elem) ** 2, rounding))
+                e_list.append(round(np.mean(elem), 6))
+                d_list.append(round(np.std(elem) ** 2, 6))
             table = PrettyTable()
             table.field_names = [f"{dist_name} n = " + str(size), "Mean", "Median", "Zr", "Zq", "Ztr"]
             e_list.insert(0, 'E(z)')
