@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     # LABS
     # build_histogram(names, sizes[0])  # lab 1
-    calc_characteristics(names, sizes[1], repeat_num)  # lab 2
-    build_boxplot(names, sizes[2], repeat_num)  # lab 3
+    # calc_characteristics(names, sizes[1], repeat_num)  # lab 2
+    # build_boxplot(names, sizes[2], repeat_num)  # lab 3
     # draw_ecdf(names, sizes[3])  # lab 4.1
-    # draw_kde(names, sizes[3], coefs)  # lab 4.2
+    draw_kde(names, sizes[3], coefs)  # lab 4.2

@@ -75,6 +75,7 @@
 	\begin{itemize}
 		\item Нормальное распределение: $N(x, 0, 1)$
 		\item Распределение Коши: $C(x, 0, 1)$
+		\item Распределение Лапласа: $L(x, 0, \frac{1}{\sqrt{2}})$
 		\item Распределение Пуассона: $P(k, 10)$
 		\item Равномерное распределение: $U(x, -\sqrt{3}, \sqrt{3})$
 	\end{itemize}
@@ -148,8 +149,6 @@
 		\end{equation}
 		
 	\end{itemize}
-	
-	\subsection{Гистограмма}
 	
 	\subsubsection{Определение}
 	
@@ -417,29 +416,239 @@
 	Необязательно решение $ - $ пара точек, между которыми найдено расстояние Фреше, $-$ является единственным. \\
 	
 	Рассмотрим расстояние Фреше для двух кривых: ядерной оценки плотности для равномерного распределения и самого равномерного распределения при $n=100$:
-	
-	\section{Результаты}
-	\subsection{Гистограмма}
-	\subsection{Характеристики положения и рассеяния}
-	\subsection{Боксплот Тьюки}
-	\subsection{Доля выбросов}
-	\subsection{Теоретическая вероятность выбросов}
-	\subsection{Эмпирическая функция распределения}
-	\subsection{Ядерные оценки плотности распределения}
-	\section{Обсуждение}
-	\section{Реализация}
+		\section{Реализация}
 	\subsection{Описание}
 	Данная лабораторная работа была выполнена с использованием языка
 	программирования Python 3.10 в среде разработки PyCharm с
 	использованием следующих библиотек:
 	\begin{itemize}
-		\item scipy версии 1.8.0
-		\item numpy версии 1.22.0
-		\item matplotlib версии 3.5.1
-		\item seaborn версии 0.11.2
-	\subsection{Ссылка на репозиторий}
-	\url{https://github.com/IMZolin/Math-statistics-labs} \ - GitHub репозиторий
+		\item scipy версии 1.10.1
+		\item numpy версии 1.24.2
+		\item matplotlib версии 3.7.1
+		\item seaborn версии 0.12.2
+		\item prettytable
+		версии 3.6.0
+		\subsection{Ссылка на репозиторий}
+		\url{https://github.com/IMZolin/Math-statistics-labs} \ - GitHub репозиторий
 	\end{itemize}
+	\section{Результаты}
+	\subsection{Гистограмма и график плотности распределения}
+	\begin{figure}[H]
+		\centering
+		\begin{tabular}{c c c}
+			\includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_norm_10.png}
+			& \includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_norm_50.png}
+			& \includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_norm_1000.png}
+		\end{tabular}
+		\caption{Нормальное распределение \eqref{normal}}
+		\label{fig:normal}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{tabular}{c c c}
+			\includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_cauchy_10.png}
+			& \includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_cauchy_50.png}
+			& \includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_cauchy_1000.png}
+		\end{tabular}
+		\caption{Распределение Коши\eqref{cauchy}}
+		\label{fig:cauchy}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{tabular}{c c c}
+			\includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_laplace_10.png}
+			& \includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_laplace_50.png}
+			& \includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_laplace_1000.png}
+		\end{tabular}
+		\caption{Распределение Лапласа \eqref{laplace}}
+		\label{fig:laplace}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{tabular}{c c c}
+			\includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_poisson_10.png}
+			& \includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_poisson_50.png}
+			& \includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_poisson_1000.png}
+		\end{tabular}
+		\caption{Распределение Пуассона\eqref{poisson}}
+		\label{fig:poisson}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{tabular}{c c c}
+			\includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_uniform_10.png}
+			& \includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_uniform_50.png}
+			& \includegraphics[height = 0.25\textheight, width = 0.31\textwidth]{../image/lab1/lab1_uniform_1000.png}
+		\end{tabular}
+		\caption{Равномерное распределение \eqref{uniform}}
+		\label{fig:uniform}
+	\end{figure}
+	\subsection{Характеристики положения и рассеяния}
+	\subsection{Боксплот Тьюки}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{../image/lab3/lab3_norm.png}
+		\caption{Нормальное распределение}
+		\label{fig:normal}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{../image/lab3/lab3_cauchy.png}
+		\caption{Распределение Коши}
+		\label{fig:cauchy}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{../image/lab3/lab3_laplace.png}
+		\caption{Распределение Лапласа}
+		\label{fig:laplace}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{../image/lab3/lab3_poisson.png}
+		\caption{Распределение Пуассона}
+		\label{fig:poisson}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{../image/lab3/lab3_uniform.png}
+		\caption{Равномерное распределение}
+		\label{fig:uniform}
+	\end{figure}
+	\subsection{Доля выбросов}
+	\subsection{Теоретическая вероятность выбросов}
+	\subsection{Эмпирическая функция распределения}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_ecdf_norm.png}
+		\caption{Нормальное распределение}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_ecdf_cauchy.png}
+		\caption{Распределение Коши}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_ecdf_laplace.png}
+		\caption{Распределение Лапласа}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_ecdf_poisson.png}
+		\caption{Распределение Пуассона}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_ecdf_uniform.png}
+		\caption{Равномерное распределение}
+	\end{figure}
+	\subsection{Ядерные оценки плотности распределения}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_norm_20.png}
+		\caption{Нормальное распределение размерностью 20}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_norm_60.png}
+		\caption{Нормальное распределение размерностью 60}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_norm_100.png}
+		\caption{Нормальное распределение размерностью 100}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_cauchy_20.png}
+		\caption{Распределение Коши размерностью 20}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_cauchy_60.png}
+		\caption{Распределение Коши размерностью 60}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_cauchy_100.png}
+		\caption{Распределение Коши размерностью 100}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_laplace_20.png}
+		\caption{Распределение Лапласа размерностью 20}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_laplace_60.png}
+		\caption{Распределение Лапласа размерностью 60}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_laplace_100.png}
+		\caption{Распределение Лапласа размерностью 100}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_poisson_20.png}
+		\caption{Распределение Пуассона размерностью 20}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_poisson_60.png}
+		\caption{Распределение Пуассона размерностью 60}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_poisson_100.png}
+		\caption{Распределение Пуассона размерностью 100}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_uniform_20.png}
+		\caption{Равномерное распределение размерностью 20}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_uniform_60.png}
+		\caption{Равномерное распределение размерностью 60}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.35]{../image/lab4/lab4_kde_uniform_100.png}
+		\caption{Равномерное распределение размерностью 100}
+	\end{figure}
+	
+	
+	\section{Обсуждение}
+
 	\newpage
 	\addcontentsline{toc}{section}{Литература}
 	

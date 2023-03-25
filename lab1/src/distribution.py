@@ -50,7 +50,7 @@ class Distribution:
             self.x = np.linspace(self.density.ppf(0.01), self.density.ppf(0.99), num=100)
             self.pdf = self.density.pdf(self.x)
 
-    def set_x_cdf_pdf(self):
+    def set_x_cdf_pdf(self, param: str):
         self.x = np.linspace(self.a, self.b, self.repeat_num)
         if self.name == names[0]:
             self.pdf = st.norm.pdf(self.x)
@@ -62,7 +62,8 @@ class Distribution:
             self.pdf = st.laplace.pdf(self.x, loc=0, scale=1 / math.sqrt(2))
             self.cdf = st.laplace.cdf(self.x, loc=0, scale=1 / math.sqrt(2))
         elif self.name == names[3]:
-            self.x = np.linspace(self.a, self.b, -self.a + self.b + 1)
+            if param == 'kde':
+                self.x = np.linspace(self.a, self.b, -self.a + self.b + 1)
             self.pdf = st.poisson(10).pmf(self.x)
             self.cdf = st.poisson(10).cdf(self.x)
         elif self.name == names[4]:
