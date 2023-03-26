@@ -6,6 +6,7 @@ from src.distribution import Distribution
 
 a, b = -4, 4
 a_poisson, b_poisson = 6, 14
+coefs = [0.5, 1, 2]
 
 
 def draw_ecdf(dist_names, sizes):
@@ -24,7 +25,7 @@ def draw_ecdf(dist_names, sizes):
         plt.show()
 
 
-def draw_kde(dist_names, sizes, coefs):
+def draw_kde(dist_names, sizes):
     sns.set_style("whitegrid")
     for dist_name in dist_names:
         for size in sizes:

@@ -3,8 +3,10 @@ import numpy as np
 from src.distribution import Distribution
 from prettytable import PrettyTable
 
+repeat_num = 1000
 
-def calc_characteristics(dist_names, sizes, repeat_num):
+
+def calc_characteristics(dist_names, sizes):
     for dist_name in dist_names:
         for size in sizes:
             mean_list, median_list, z_r_list, z_q_list, z_tr_list, e_list, d_list = [], [], [], [], [], [], []
@@ -14,7 +16,7 @@ def calc_characteristics(dist_names, sizes, repeat_num):
                 dist.set_distribution()
                 arr = sorted(dist.random_numbers)
                 mean_list.append(np.mean(arr))
-                median_list.append(np.mean(arr))
+                median_list.append(np.median(arr))
                 z_r_list.append(z_r(arr, size))
                 z_q_list.append(z_q(arr, size))
                 z_tr_list.append(z_tr(arr, size))

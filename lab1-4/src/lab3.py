@@ -5,12 +5,12 @@ from matplotlib import pyplot as plt
 from src.distribution import Distribution
 
 
-def build_boxplot(dist_names, sizes, repeat_num):
+def build_boxplot(dist_names, sizes):
     for dist_name in dist_names:
         tips = []
         for size in sizes:
             dist = Distribution(dist_name, size)
-            emission_share(dist, repeat_num)
+            emission_share(dist, dist.repeat_num)
             tips.append(dist.random_numbers)
         draw_boxplot(dist_name, tips)
 
