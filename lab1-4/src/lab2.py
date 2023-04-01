@@ -1,7 +1,10 @@
+import math
+
 import numpy as np
 
 from src.distribution import Distribution
 from prettytable import PrettyTable
+from IPython.display import display, Latex
 
 repeat_num = 1000
 
@@ -9,7 +12,7 @@ repeat_num = 1000
 def calc_characteristics(dist_names, sizes):
     for dist_name in dist_names:
         for size in sizes:
-            mean_list, median_list, z_r_list, z_q_list, z_tr_list, e_list, d_list = [], [], [], [], [], [], []
+            mean_list, median_list, z_r_list, z_q_list, z_tr_list, e_list, d_list, e_plus_minus_sqrt_d = [], [], [], [], [], [], [], []
             lists = [mean_list, median_list, z_r_list, z_q_list, z_tr_list]
             for i in range(repeat_num):
                 dist = Distribution(dist_name, size)
@@ -23,12 +26,17 @@ def calc_characteristics(dist_names, sizes):
             for elem in lists:
                 e_list.append(round(np.mean(elem), 6))
                 d_list.append(round(np.std(elem) ** 2, 6))
+                e_plus_minus_sqrt_d.append([round(round(np.mean(elem), 6) - math.sqrt(round(np.std(elem) ** 2, 6)), 6),
+                                            round(round(np.mean(elem), 6) + math.sqrt(round(np.std(elem) ** 2, 6)), 6)])
             table = PrettyTable()
             table.field_names = [f"{dist_name} n = " + str(size), "Mean", "Median", "Zr", "Zq", "Ztr"]
             e_list.insert(0, 'E(z)')
             d_list.insert(0, 'D(z)')
+            e_plus_minus_sqrt_d.insert(0, 'E(z) +- sqrtD(z)')
             table.add_row(e_list)
             table.add_row(d_list)
+            table.add_row(e_plus_minus_sqrt_d)
+            # print(e_plus_minus_sqrt_d)
             print(table)
 
 
