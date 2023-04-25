@@ -1,6 +1,6 @@
 from matplotlib import pyplot as plt
 import numpy as np
-from src.distribution import Distribution
+from distribution import Distribution
 
 colors = ["deepskyblue", "limegreen", "tomato", "blueviolet", "orange"]
 

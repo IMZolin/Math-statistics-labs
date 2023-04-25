@@ -2,7 +2,7 @@ import numpy as np
 import seaborn as sns
 from matplotlib import pyplot as plt
 
-from src.distribution import Distribution
+from distribution import Distribution
 
 
 def build_boxplot(dist_names, sizes):

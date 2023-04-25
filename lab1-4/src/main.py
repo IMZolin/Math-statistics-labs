@@ -1,8 +1,8 @@
-from src.distribution import names
-from src.lab1 import build_histogram
-from src.lab2 import calc_characteristics
-from src.lab3 import build_boxplot
-from src.lab4 import draw_ecdf, draw_kde
+from distribution import names
+from lab1 import build_histogram
+from lab2 import calc_characteristics
+from lab3 import build_boxplot
+from lab4 import draw_ecdf, draw_kde
 
 if __name__ == "__main__":
     # initial conditions

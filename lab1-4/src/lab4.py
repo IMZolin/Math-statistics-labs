@@ -2,7 +2,7 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 from statsmodels.distributions.empirical_distribution import ECDF
 
-from src.distribution import Distribution
+from distribution import Distribution
 
 a, b = -4, 4
 a_poisson, b_poisson = 6, 14

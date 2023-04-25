@@ -2,9 +2,8 @@ import math
 
 import numpy as np
 
-from src.distribution import Distribution
+from distribution import Distribution
 from prettytable import PrettyTable
-from IPython.display import display, Latex
 
 repeat_num = 1000
 
