@@ -1,0 +1,41 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Постановка задачи}{4}{section.1}%
+\contentsline {section}{\numberline {2}Теория}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Двумерное нормальное распределение}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Корреляционный момент (ковариация) и коэффициент корреляции}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Выборочные коэффициенты корреляции}{5}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Выборочный коэффициент корреляции Пирсона}{5}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Выборочный квадрантный коэффициент корреляции}{5}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Выборочный коэффициент ранговой корреляции Спирмена}{5}{subsubsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.4}Эллипсы рассеивания}{6}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Простая линейная регрессия}{6}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Модель простой линейной регрессии}{6}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Метод наименьших квадратов}{6}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.3}Расчётные формулы для МНК-оценок}{7}{subsubsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.6}Робастные оценки коэффициентов линейной регрессии}{8}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Метод максимального правдоподобия}{8}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Проверка гипотезы о законе распределения генеральной совокупности. Метод хи-квадрат}{9}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Доверительные интервалы для параметров нормального распределения}{11}{subsection.2.9}%
+\contentsline {subsubsection}{\numberline {2.9.1}Доверительный интервал для математического ожидания $m$ нормального распределения}{11}{subsubsection.2.9.1}%
+\contentsline {subsubsection}{\numberline {2.9.2}Доверительный интервал для среднего квадратического отклонения $\sigma $ нормального распределения}{12}{subsubsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.10}Доверительные интервалы для математического ожидания $m$ и среднего квадратического отклонения $\sigma $ произвольного распределения при большом объёме выборки. Асимптотический подход}{12}{subsection.2.10}%
+\contentsline {subsubsection}{\numberline {2.10.1}Доверительный интервал для математического ожидания $m$ произвольной генеральной совокупности при большом объёме выборки}{12}{subsubsection.2.10.1}%
+\contentsline {subsubsection}{\numberline {2.10.2}Доверительный интервал для среднего квадратического отклонения $\sigma $ произвольной генеральной совокупности при большом объёме выборки}{13}{subsubsection.2.10.2}%
+\contentsline {section}{\numberline {3}Реализация}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Описание}{14}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Ссылка на репозиторий}{14}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Результаты}{14}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Вычислительные характеристики распределения}{14}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Эллипсы рассеивания}{16}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Оценки коэффициентов линейной регрессии}{17}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Выборка без возмущений}{17}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Выборка с возмущениями}{18}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.4}Проверка гипотезы о законе распределения генеральной совокупности. Метод хи-квадрат}{18}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Доверительные интервалы для параметров нормального распределения}{19}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Доверительные интервалы для параметров произвольного распределения. Асимптотический подход}{20}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Обсуждение}{20}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Выборочные коэффициенты корреляции}{20}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Оценки коэффициентов линейной регрессии}{20}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Проверка гипотезы о законе распределения генеральной совокупности. Метод хи-квадрат}{20}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Доверительные интервалы для параметров распределения}{20}{subsection.5.4}%
+\contentsline {section}{Литература}{22}{subsection.5.4}%
