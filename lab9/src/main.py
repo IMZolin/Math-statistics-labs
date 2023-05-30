@@ -14,7 +14,7 @@ def plot_data(data):
         y = d.values[:, 0]
         
         for i in range(len(x) - 1):
-            plt.plot([x[i], x[i+1]], [y[i], y[i]], color='blue')
+            plt.plot([x[i], x[i+1]], [y[i], y[i]], color='m')
     
     plt.xlabel('n')
     plt.ylabel('mV')
@@ -31,13 +31,13 @@ def plot_interval(data, part):
     y_max = np.minimum(data[:, 0], 0.919663)   # Upper limit for the interval
     
     if part == 2 and np.any(mask):
-        plt.vlines(x, data[:, 0], data[:, 1], colors="c")              # Plot the whole interval with cyan
-        plt.vlines(x2[mask], y_min[mask], y_max[mask], colors="hotpink")  # Plot the interval within the condition with hotpink
+        plt.vlines(x, data[:, 0], data[:, 1], colors="g")              # Plot the whole interval with cyan
+        plt.vlines(x2[mask], y_min[mask], y_max[mask], colors="m")  # Plot the interval within the condition with hotpink
     elif part == 3:
-        plt.vlines(x, data[:, 0], data[:, 1], colors="c")
-        plt.hlines(0.919603, 0, 200, colors="hotpink", lw=2)
+        plt.vlines(x, data[:, 0], data[:, 1], colors="g")
+        plt.hlines(0.919603, 0, 200, colors="m", lw=2)
     else:
-        plt.vlines(x, data[:, 0], data[:, 1], colors="c")  # Plot the whole interval with cyan
+        plt.vlines(x, data[:, 0], data[:, 1], colors="g")  # Plot the whole interval with cyan
 
 
 def wrapper_plot_interval(data, eps, part, label="Data intervals"):

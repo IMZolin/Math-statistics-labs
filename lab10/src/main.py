@@ -63,29 +63,40 @@ def plot_inf_set():
     # plt.show()
 
 
-def plot_hallway(data, eps, part, label = 'Data intervals'):
+def plot_hallway(data, eps, part, label = 'Corridor of joint dependencies'):
     data_n = [t for t in range(1, len(data) + 1)]
     data_n2 = [t for t in range(-50, len(data) + 51)]
     data = [[data[i] - eps, data[i] + eps] for i in range(len(data))]
-
-    for i in range(len(data)):
-        plt.vlines(data_n[i], data[i][0], data[i][1], colors="c", lw=1)
-
-    y0 = []
-    y1 = []
+    
+    beta0 = [0.91921, 0.91921, 0.9192, 0.91908, 0.91899, 0.91899, 0.91901, 0.91905, 0.91921]
+    beta1 = [5.4802e-06, 6.7974e-06, 6.8769e-06, 7.7739e-06, 8.319e-06, 7.9467e-06, 7.45e-06, 6.2938e-06, 5.4802e-06]
+    nodes = [[beta0[i], beta1[i]] for i in range(len(beta0))]
+    corr_low, corr_high = [], []
     if part == 1:
+        range_values = data_n
         for i in range(len(data)):
-            y0.append(9.1899e-01 + 5.4802e-06 * data_n[i])
-            y1.append(9.1921e-01 + 8.3357e-06 * data_n[i])
-        plt.plot(data_n, y0, "m--")
-        plt.plot(data_n, y1, "m--")
+            plt.vlines(data_n[i], data[i][0], data[i][1], colors="c", lw=1)
     else:
-        for i in range(len(data_n2)):
-            y0.append(9.1899e-01 + 5.4802e-06 * data_n2[i])
-            y1.append(9.1921e-01 + 8.3357e-06 * data_n2[i])
-        plt.plot(data_n2, y0, "m--")
-        plt.plot(data_n2, y1, "m--")
+        range_values = data_n2
+        for i in range(len(data)):
+            plt.vlines(data_n[i], data[i][0], data[i][1], colors="c", lw=1)
+    for i in range(len(range_values)):
+        min_value = max_value = nodes[0][0] + nodes[0][1] * i
+        for node in nodes:
+            value = node[0] + node[1] * i
+            if value < min_value:
+                min_value = value
+            if value > max_value:
+                max_value = value 
+        corr_high.append(max_value - 0.0003)
+        corr_low.append(min_value - 0.0003)   
+    if part == 1:
+        plt.fill_between(data_n, corr_low, corr_high, alpha=0.3, color='m')
+    else: 
+        plt.fill_between(data_n2, corr_low, corr_high, alpha=0.3, color='m')
 
+    plt.xlim()
+    plt.ylim()
     plt.xlabel('n')
     plt.ylabel('mV')
     plt.title(label)
@@ -189,7 +200,8 @@ if __name__ == "__main__":
     # plot_omega()
     # plot_regress_residuals(data, eps, 1)
     # plot_regress_residuals(data, eps, 2)
-    plot_mu(data, eps)
+    # plot_mu(data, eps)
     # plot_inf_set()
     # plot_hallway(data, eps, 1)
-    # plot_hallway(data, eps, 2)
+    plot_hallway(data, eps, 2)
+    # plotSegmentHallway(data, eps)
