@@ -72,14 +72,9 @@ def plot_hallway(data, eps, part, label = 'Corridor of joint dependencies'):
     beta1 = [5.4802e-06, 6.7974e-06, 6.8769e-06, 7.7739e-06, 8.319e-06, 7.9467e-06, 7.45e-06, 6.2938e-06, 5.4802e-06]
     nodes = [[beta0[i], beta1[i]] for i in range(len(beta0))]
     corr_low, corr_high = [], []
-    if part == 1:
-        range_values = data_n
-        for i in range(len(data)):
-            plt.vlines(data_n[i], data[i][0], data[i][1], colors="c", lw=1)
-    else:
-        range_values = data_n2
-        for i in range(len(data)):
-            plt.vlines(data_n[i], data[i][0], data[i][1], colors="c", lw=1)
+    range_values = data_n
+    for i in range(len(data)):
+        plt.vlines(data_n[i], data[i][0], data[i][1], colors="c", lw=1)
     for i in range(len(range_values)):
         min_value = max_value = nodes[0][0] + nodes[0][1] * i
         for node in nodes:
@@ -88,12 +83,20 @@ def plot_hallway(data, eps, part, label = 'Corridor of joint dependencies'):
                 min_value = value
             if value > max_value:
                 max_value = value 
-        corr_high.append(max_value - 0.0003)
-        corr_low.append(min_value - 0.0003)   
-    if part == 1:
-        plt.fill_between(data_n, corr_low, corr_high, alpha=0.3, color='m')
-    else: 
-        plt.fill_between(data_n2, corr_low, corr_high, alpha=0.3, color='m')
+        corr_high.append(max_value)
+        corr_low.append(min_value)   
+    plt.fill_between(data_n, corr_low, corr_high, alpha=0.3, color='m')
+    
+    if part == 2: 
+        right_extra_high = [corr_high[-1] + (corr_high[-1] - corr_high[-2]) * i for i in range(0, 51)]
+        right_extra_low = [corr_low[-1] + (corr_low[-1] - corr_low[-2]) * i for i in range(0, 51)]
+        plt.fill_between(range(200, 251), right_extra_low, right_extra_high, alpha=0.5, color='m')
+        left_extra_high = [corr_high[0] + (corr_high[0] - corr_high[1]) * i for i in range(1, 51)]
+        left_extra_low = [corr_low[0] + (corr_low[0] - corr_low[1]) * i for i in range(1, 51)]
+        left_extra_high.reverse()
+        left_extra_low.reverse()
+        plt.fill_between(range(-49, 1), left_extra_low, left_extra_high, alpha=0.5, color='m')
+        # plt.grid()
 
     plt.xlim()
     plt.ylim()
@@ -190,6 +193,46 @@ def plot_mu(data, eps):
     # plt.show()
 
 
+def findDownMin(data, eps):
+    min = data[0][0] - eps
+    for i in range(len(data)):
+        if data[i][0] - eps < min:
+            min = data[i][0] - eps
+    return min
+
+def findDownMax(data, eps):
+    max = data[0][0] - eps
+    for i in range(len(data)):
+        if data[i][0] - eps > max:
+            max = data[i][0] - eps
+    return max
+
+def findUpMin(data, eps):
+    min = data[0][0] + eps
+    for i in range(len(data)):
+        if data[i][0] + eps < min:
+            min = data[i][0] + eps
+    return min
+
+def findUpMax(data, eps):
+    max = data[0][0] + eps
+    for i in range(len(data)):
+        if data[i][0] + eps > max:
+            max = data[i][0] + eps
+    return max
+
+
+def Jac(data, eps):
+    data = [[data[i], data[i]] for i in range(len(data))]
+    up_max = findUpMax(data, eps)
+    up_min = findUpMin(data, eps)
+    down_max = findDownMax(data, eps)
+    down_min = findDownMin(data, eps)
+    print(up_max, up_min)
+    print(down_max, down_min)
+    return (up_min - down_max) / (up_max - down_min)
+
+
 if __name__ == "__main__":
     data = load_from_csv("data/Chanel_1_400nm_2mm.csv")
 
@@ -203,5 +246,5 @@ if __name__ == "__main__":
     # plot_mu(data, eps)
     # plot_inf_set()
     # plot_hallway(data, eps, 1)
-    plot_hallway(data, eps, 2)
-    # plotSegmentHallway(data, eps)
+    # plot_hallway(data, eps, 2)
+    print(Jac(data, eps))
